@@ -1,0 +1,37 @@
+//用户
+create table users(
+id varchar(40) primary key ,
+name varchar(40),
+password varchar(40),
+email varchar(60)
+)character set utf8 collate utf8_general_ci;
+
+drop table users;
+
+
+//订单
+insert into users(id,name,password,email)values ('123','123','123','123@qq.com');
+insert into users(id,name,password,email)values ('456','456','456','456@qq.com');
+delete from users where id=456;
+
+create table orders(
+id varchar(60)primary key,
+ordername varchar(60),
+gongying varchar(60),
+goodsid varchar(60),
+goodsname varchar(60),
+number int,
+price double(16,2),
+money double(16,2),
+date varchar(60),
+paystate int
+)character set utf8 collate utf8_general_ci;
+
+insert into orders(id,ordername,gongying,goodsid,goodsname,number,price,money,date,paystate)values
+('001','电池订购单','一号公司','0001','电池','10','1.00','10.00','2019-12-01','0');
+'002','叶片订购单','二号公司','0002','叶片','10','2.00','20.00','2019-12-02','0'
+
+
+
+select*from orders;
+delete from orders where id=002;
